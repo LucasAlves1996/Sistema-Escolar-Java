@@ -33,12 +33,27 @@ public class Cadastro {
         }
     }
     
-    public void cadastrarProfessor(String nome, String dataNascimento, String cpf){
+    public void cadastrarProfessor(String nome, String dataNascimento, String cpf) throws SQLException{
         Professor novoProfessor = new Professor();
         novoProfessor.setNome(nome);
         novoProfessor.setDataNascimento(dataNascimento);
         novoProfessor.setCpf(cpf);
-        
+        Connection con = new ConnectionFactory().getConnection();
+        String sql = "INSERT INTO professores " +
+                "(nome,dataNascimento,cpf) " +
+                "VALUES (?,?,?)";
+        try {
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, novoProfessor.getNome());
+            stmt.setString(2, novoProfessor.getDataNascimento());
+            stmt.setString(3, novoProfessor.getCpf());
+            stmt.execute();
+            stmt.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            con.close();
+        }
     }
     
     public void cadastrarTurma(String nome, String ano, String turno){

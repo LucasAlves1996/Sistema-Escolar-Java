@@ -92,6 +92,7 @@ body{
 	background-color:rgb(0,90,0);
 	color:white;
 	font-weight:bold;
+        cursor:pointer;
 }
 #button:hover{
 	background-color:rgb(10,120,10);

@@ -1,17 +1,28 @@
-<%-- 
-    Document   : cadastrarProfessor
-    Created on : 05/07/2018, 06:35:10
-    Author     : Lucas
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Cadastrar professor</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="CSS\style.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <header></header>
+        <nav></nav>
+        <section>
+            <div id="form">
+                <h1>Cadastro de professor</h1>
+                <form method="POST" action="cadastrandoProfessor.jsp">
+                    <label>Nome completo:</label>
+                    <input type="text" name="nome" placeholder="Digite seu nome completo...">
+                    <label>Data de nascimento:</label>
+                    <input type="date" name="dataNascimento">
+                    <label>CPF:</label>
+                    <input type="text" name="cpf" placeholder="Digite o seu cpf...">
+                    <input type="submit" value="Cadastrar" id="button">
+                </form>
+            </div>
+        </section>
+        <footer></footer>
     </body>
 </html>
