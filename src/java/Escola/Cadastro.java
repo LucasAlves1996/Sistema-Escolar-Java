@@ -56,12 +56,27 @@ public class Cadastro {
         }
     }
     
-    public void cadastrarTurma(String nome, String ano, String turno){
+    public void cadastrarTurma(String nome, String ano, String turno) throws SQLException{
         Turma novaTurma = new Turma();
         novaTurma.setNome(nome);
         novaTurma.setAno(ano);
         novaTurma.setTurno(turno);
-        
+        Connection con = new ConnectionFactory().getConnection();
+        String sql = "INSERT INTO turmas " +
+                "(nome,ano,turno) " +
+                "VALUES (?,?,?)";
+        try{
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, novaTurma.getNome());
+            stmt.setString(2, novaTurma.getAno());
+            stmt.setString(3, novaTurma.getTurno());
+            stmt.execute();
+            stmt.close();
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }finally{
+            con.close();
+        }
     }
     
 }

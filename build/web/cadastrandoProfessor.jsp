@@ -4,8 +4,9 @@
     novoCadastro.cadastrarProfessor(request.getParameter("nome"), request.getParameter("dataNascimento"), request.getParameter("cpf"));
 %>
 <script>
+    alert("Professor cadastrado com sucesso!");
     voltarParaIndex();
     function voltarParaIndex(){
-        setTimeout(function(){ window.location.href = "index.jsp"; },5000);
+        window.location.href = "index.jsp";
     }
 </script>

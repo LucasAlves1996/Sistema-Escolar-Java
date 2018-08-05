@@ -14,11 +14,11 @@
                 <h1>Cadastro de professor</h1>
                 <form method="POST" action="cadastrandoProfessor.jsp">
                     <label>Nome completo:</label>
-                    <input type="text" name="nome" placeholder="Digite seu nome completo...">
+                    <input type="text" name="nome" placeholder="Digite o nome do professor...">
                     <label>Data de nascimento:</label>
                     <input type="date" name="dataNascimento">
                     <label>CPF:</label>
-                    <input type="text" name="cpf" placeholder="Digite o seu cpf...">
+                    <input type="text" name="cpf" placeholder="Digite o cpf do professor...">
                     <input type="submit" value="Cadastrar" id="button">
                 </form>
             </div>

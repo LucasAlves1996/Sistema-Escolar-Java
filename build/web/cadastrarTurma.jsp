@@ -1,17 +1,28 @@
-<%-- 
-    Document   : cadastrarTurma
-    Created on : 05/07/2018, 06:35:33
-    Author     : Lucas
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Cadastrar turma</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="CSS\style.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <header></header>
+        <nav></nav>
+        <section>
+            <div id="form">
+                <h1>Cadastro de turma</h1>
+                <form method="POST" action="cadastrandoTurma.jsp">
+                    <label>Nome da turma:</label>
+                    <input type="text" name="nome" placeholder="Digite o nome da turma...">
+                    <label>Ano:</label>
+                    <input type="text" name="ano" placeholder="Digite o ano da turma...">
+                    <label>Turno:</label>
+                    <input type="text" name="turno" placeholder="Digite o turno da turma...">
+                    <input type="submit" value="Cadastrar" id="button">
+                </form>
+            </div>
+        </section>
+        <footer></footer>
     </body>
 </html>

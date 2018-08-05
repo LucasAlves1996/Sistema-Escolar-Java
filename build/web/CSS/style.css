@@ -3,7 +3,7 @@ body{
     color:white;
     font-family:verdana, Sans Serif;
     margin:0;
-    padding-top:200px;
+    padding-top:180px;
 }
 #menu{
     margin:auto;
@@ -44,67 +44,94 @@ body{
     background-color:rgb(80,180,80);
 }
 #form{
-	width:60%;
-	margin:auto;
-	margin-top:10%;
-	border-width:1px;
+    width:60%;
+    margin:auto;
+    border-width:1px;
     border-style:solid;
     border-color:white;
 }
 #form h1{
-	margin:0;
-	text-align:center;
-	font-family:monospace;
-	font-size:3.0em;
-	margin:10px 0px 10px 0px;
+    margin:0;
+    text-align:center;
+    font-family:monospace;
+    font-size:3.0em;
+    margin:10px 0px 10px 0px;
 }
 #form h2{
-	margin:0;
-	text-align:center;
-	font-size:0.8em;
-	margin:10px 0px 10px 0px;
+    margin:0;
+    text-align:center;
+    font-size:0.8em;
+    margin:10px 0px 10px 0px;
 }
 #form h2 a{
-	color:rgb(0,90,0);
+    color:rgb(0,90,0);
 }
 #form h2 a:hover{
-	color:rgb(10,120,10);
+    color:rgb(10,120,10);
 }
 #form form{
-	margin:0;
-	padding-top:25px;
-	padding-bottom:25px;
-	padding-left:15%;
-	padding-right:15%;
+    margin:0;
+    padding-top:25px;
+    padding-bottom:25px;
+    padding-left:15%;
+    padding-right:15%;
 }
 #form form input{
-	padding-top:10px;
-	padding-bottom:10px;
-	margin-top:3px;
-	margin-bottom:8px;
-	border-style:none;
-	border-radius:3px;
-	font-size:1.2em;
-	width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-top:3px;
+    margin-bottom:8px;
+    border-style:none;
+    border-radius:3px;
+    font-size:1.2em;
+    width:100%;
 }
 #button{
-	width:100%;
-	background-color:rgb(0,90,0);
-	color:white;
-	font-weight:bold;
-        cursor:pointer;
+    width:100%;
+    background-color:rgb(0,90,0);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
 }
 #button:hover{
-	background-color:rgb(10,120,10);
+    background-color:rgb(10,120,10);
 }
-.msg{
-	font-weight:bold;
-	padding-top:10px;
-	padding-bottom:10px;
-	margin-bottom:-51px;
-	background-color:rgb(255,80,80);
-	font-size:1.5em;
-	border-radius:3px;
-	text-align:center;
-	font-family:monospace;
+.listaTurmas{
+    margin:auto;
+    width:80%;
 }
+.listaTurmas a{
+    color:white;
+    text-decoration:none;
+    padding:0px 0px 0px 5px;
+    width:100%;
+}
+.listaTurmas th{
+    width:100%;
+    font-size:35px;
+    background-color:rgb(25,75,15);
+    padding:20px 0px 20px 0px;
+    border-radius:0px 50px 0px 0px; 
+}
+#headerList{
+    background-color:rgb(20,60,10);
+    text-align:center;
+    font-size:16px;
+}
+.listaTurmas tr{
+    background-color:rgb(10,40,0);
+    padding:10px 10px 10px 10px;
+}
+.listaTurmas tr:hover{
+    background-color:rgb(25,75,15);
+}
+#nome{
+    width:50%;
+}
+#ano{
+    width:20%;
+}
+#turno{
+    width:30%;
+}
+
