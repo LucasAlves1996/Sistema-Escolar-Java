@@ -8,8 +8,12 @@
         <link rel="stylesheet" type="text/css" href="CSS\style.css">
     </head>
     <body>
-        <header></header>
-	<nav></nav>
+        <header>
+            <nav>
+                <img src="IMGS/home.png" onclick="home()" id="bt-home" height="100" width="100">
+            </nav>
+        </header>
+        
 	<section>
             <div id="menu">
                 <h1>Sistema escolar</h1>
@@ -23,6 +27,9 @@
 	</section>
 	<footer></footer>
         <script>
+            function home(){
+                window.location.href = "index.jsp";
+            }
             function cadastrarAluno(){
                 window.location.href = "cadastrarAluno.jsp";
             }

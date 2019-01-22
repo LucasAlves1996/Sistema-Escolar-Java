@@ -3,7 +3,20 @@ body{
     color:white;
     font-family:verdana, Sans Serif;
     margin:0;
-    padding-top:180px;
+    padding:0;
+}
+nav{
+    width: 100px;
+    padding:30px 0px;
+    margin: auto;
+}
+#bt-home{
+    border-radius: 150px;
+    cursor: pointer;
+}
+#bt-home:hover{
+    box-shadow: 0px 0px 50px 0px white;
+    background-color: rgb(230,230,230);
 }
 #menu{
     margin:auto;
@@ -24,7 +37,7 @@ body{
 }
 #botoes button{
     width:47.5%;
-    background-color:rgb(40,115,30);
+    background-color:rgb(25,75,15);
     color:white;
     font-weight:bold;
     font-size:25px;
@@ -41,7 +54,7 @@ body{
     cursor:pointer;
 }
 #botoes button:hover{
-    background-color:rgb(80,180,80);
+    background-color:rgb(40,115,30);
 }
 #form{
     width:60%;
@@ -111,16 +124,15 @@ body{
     font-size:35px;
     background-color:rgb(25,75,15);
     padding:20px 0px 20px 0px;
-    border-radius:0px 50px 0px 0px; 
+}
+.listaTurmas tr{
+    background-color:rgb(10,40,0);
+    padding:10px 10px 10px 10px;
 }
 #headerList{
     background-color:rgb(20,60,10);
     text-align:center;
     font-size:16px;
-}
-.listaTurmas tr{
-    background-color:rgb(10,40,0);
-    padding:10px 10px 10px 10px;
 }
 .listaTurmas tr:hover{
     background-color:rgb(25,75,15);

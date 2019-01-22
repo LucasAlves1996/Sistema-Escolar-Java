@@ -10,6 +10,12 @@
         <link rel="stylesheet" type="text/css" href="CSS\style.css">
     </head>
     <body>
+        <header>
+            <nav>
+                <img src="IMGS/home.png" onclick="home()" id="bt-home" height="100" width="100">
+            </nav>
+        </header>
+        
         <table class="listaTurmas">
             <tr>
                 <th colspan="3">Lista de turmas</th>
@@ -37,8 +43,13 @@
         <%
                }
            }catch(Exception e){
-               out.print("Não há turmas cadastradas!");
+               
            }
         %>
+        <script>
+            function home(){
+                window.location.href = "index.jsp";
+            }
+        </script>
     </body>
 </html>
