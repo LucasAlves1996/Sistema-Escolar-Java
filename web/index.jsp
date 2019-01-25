@@ -17,11 +17,13 @@
 	<section>
             <div id="menu">
                 <h1>Sistema escolar</h1>
-                <div id="botoes">
-                    <button onclick="cadastrarAluno()">Cadastrar aluno</button>
-                    <button onclick="cadastrarProfessor()">Cadastrar professor</button>
-                    <button onclick="cadastrarTurma()">Cadastrar turma</button>
-                    <button onclick="administrarTurmas()">Administrar turmas</button>
+                <div class="grid-container" id="botoes">
+                    <button class="grid-item" onclick="cadastrarAluno()">Cadastrar aluno</button>
+                    <button class="grid-item" onclick="cadastrarProfessor()">Cadastrar professor</button>
+                    <button class="grid-item" onclick="cadastrarTurma()">Cadastrar turma</button>
+                    <button class="grid-item" onclick="administrarAlunos()">Administrar alunos</button>
+                    <button class="grid-item" onclick="administrarProfessores()">Administrar professores</button>
+                    <button class="grid-item" onclick="administrarTurmas()">Administrar turmas</button>
                 </div>
             </div>
 	</section>
@@ -38,6 +40,12 @@
             }
             function cadastrarTurma(){
                 window.location.href = "cadastrarTurma.jsp";
+            }
+            function administrarAlunos(){
+                window.location.href = "administrarAlunos.jsp";
+            }
+            function administrarProfessores(){
+                window.location.href = "administrarProfessores.jsp";
             }
             function administrarTurmas(){
                 window.location.href = "administrarTurmas.jsp";

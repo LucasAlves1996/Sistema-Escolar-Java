@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Administração de turmas</title>
+        <title>Administração de alunos</title>
         <link rel="stylesheet" type="text/css" href="CSS\style.css">
     </head>
     <body>
@@ -16,28 +16,28 @@
             </nav>
         </header>
         
-        <table class="listaTurmas">
+        <table class="listaAlunos">
             <tr>
-                <th colspan="3">Lista de turmas</th>
+                <th colspan="3">Lista de alunos</th>
             </tr>
             <tr id="headerList">
-                <td id="nome">Nome da turma</td>
-                <td id="ano">Ano</td>
-                <td id="turno">Turno</td>
+                <td id="cpf">Cpf</td>
+                <td id="nomeAluno">Nome</td>
+                <td id="alteracoes"></td>
             </tr>
         </table>
         <%
            try{
                Connection con = new ConnectionFactory().getConnection();
-               String sql = "SELECT * FROM turmas";
+               String sql = "SELECT cpf, nome FROM alunos ORDER BY nome";
                ResultSet res = con.createStatement().executeQuery(sql);
                while(res.next()){         
         %>
         <table class="listaTurmas">
             <tr>
-                <td id="nomeTurma"><a href="administrarTurma.jsp"><%out.print(res.getString("nome"));%></a></td>
-                <td id="ano"><a href="administrarTurma.jsp"><%out.print(res.getString("ano"));%></a></td>
-                <td id="turno"><a href="administrarTurma.jsp"><%out.print(res.getString("turno"));%></a></td>
+                <td id="cpf"><%out.print(res.getString("cpf"));%></td>
+                <td id="nomeAluno"><%out.print(res.getString("nome"));%></td>
+                <td id="alteracoes"><button id="visualizar">Visualizar</button><button id="editar">Editar</button><button id="excluir">Excluir</button></td>
             </tr>
         </table>
         <%

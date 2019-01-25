@@ -21,22 +21,24 @@ nav{
 #menu{
     margin:auto;
     width:75%;
-    padding:0px 50px 50px 50px;
+    padding:0px 50px 25px 50px;
     border-style:solid;
     border-width:2px;
     border-color:white;
 }
 #menu h1{
     text-align:center;
-    padding:10px 0px 20px 0px;
+    padding:0;
     font-size:35px;
+    margin:25px 0px 25px 0px;
 }
 #botoes{
     margin:auto;
     width:100%;
 }
 #botoes button{
-    width:47.5%;
+    width:80%;
+    height:130px;
     background-color:rgb(25,75,15);
     color:white;
     font-weight:bold;
@@ -49,7 +51,7 @@ nav{
     border-width:1.5px;
     border-color:white;
     border-radius:5px;
-    margin:1%;
+    margin: 20px auto;
     outline:none;
     cursor:pointer;
 }
@@ -109,23 +111,23 @@ nav{
 #button:hover{
     background-color:rgb(10,120,10);
 }
-.listaTurmas{
+.listaTurmas,.listaAlunos,.listaProfessores{
     margin:auto;
     width:80%;
 }
-.listaTurmas a{
+.listaTurmas a,.listaAlunos a,.listaProfessores a{
     color:white;
     text-decoration:none;
     padding:0px 0px 0px 5px;
     width:100%;
 }
-.listaTurmas th{
+.listaTurmas th,.listaAlunos th,.listaProfessores th{
     width:100%;
     font-size:35px;
     background-color:rgb(25,75,15);
     padding:20px 0px 20px 0px;
 }
-.listaTurmas tr{
+.listaTurmas tr,.listaAlunos tr,.listaProfessores tr{
     background-color:rgb(10,40,0);
     padding:10px 10px 10px 10px;
 }
@@ -134,10 +136,10 @@ nav{
     text-align:center;
     font-size:16px;
 }
-.listaTurmas tr:hover{
+.listaTurmas tr:hover,.listaAlunos tr:hover,.listaProfessores tr:hover{
     background-color:rgb(25,75,15);
 }
-#nome{
+#nomeTurma{
     width:50%;
 }
 #ano{
@@ -145,5 +147,79 @@ nav{
 }
 #turno{
     width:30%;
+}
+#cpf{
+    width:36.5%;
+}
+#nomeAluno{
+    width:36.5%;
+}
+#alteracoes{
+    width:27%;
+}
+.grid-container{
+    display:grid;
+    grid-template-columns: 33.333333% 33.333333% 33.333333%;
+}
+#visualizar{
+    background-color:rgb(45,45,255);
+    color:rgb(255,255,255);
+    font-size:18px;
+    border:none;
+    border-radius:5px;
+    height:30px;
+    cursor:pointer;
+    margin:5px 10px 5px 10px;
+}
+#visualizar:hover{
+    background-color:rgb(45,45,180);
+}
+#editar{
+    background-color:rgb(45,200,45);
+    color:rgb(255,255,255);
+    font-size:18px;
+    border:none;
+    border-radius:5px;
+    height:30px;
+    cursor:pointer;
+    margin:5px 10px 5px 0px;
+}
+#editar:hover{
+    background-color:rgb(45,150,45);
+}
+#excluir{
+    background-color:rgb(250,45,45);
+    color:rgb(255,255,255);
+    font-size:18px;
+    border:none;
+    border-radius:5px;
+    height:30px;
+    cursor:pointer;
+}
+#excluir:hover{
+    background-color:rgb(200,45,45);
+}
+
+@media(max-width: 800px){
+    .grid-container{
+        display:grid;
+        grid-template-columns: 100%;
+    }
+    #botoes button{
+        width:90%;
+    }
+}
+
+@media(max-width: 500px){
+    #botoes button{
+        font-size:20px;
+    }
+    #menu h1{
+        font-size:25px;
+    }
+    #menu{
+        padding:0;
+        width:90%;
+    }
 }
 

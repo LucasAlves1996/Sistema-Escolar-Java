@@ -35,7 +35,7 @@
         %>
         <table class="listaTurmas">
             <tr>
-                <td id="nome"><a href="administrarTurma.jsp"><%out.print(res.getString("nome"));%></a></td>
+                <td id="nomeTurma"><a href="administrarTurma.jsp"><%out.print(res.getString("nome"));%></a></td>
                 <td id="ano"><a href="administrarTurma.jsp"><%out.print(res.getString("ano"));%></a></td>
                 <td id="turno"><a href="administrarTurma.jsp"><%out.print(res.getString("turno"));%></a></td>
             </tr>
