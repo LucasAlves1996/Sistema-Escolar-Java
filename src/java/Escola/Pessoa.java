@@ -2,6 +2,7 @@ package Escola;
 
 abstract public class Pessoa{
     
+    private int cod;
     private String nome;
     private String telefone;
     private String endereco;
@@ -60,5 +61,15 @@ abstract public class Pessoa{
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
+    public int getCod() {
+        return cod;
+    }
+
+    public void setCod(int cod) {
+        this.cod = cod;
+    }
+    
+    
     
 }

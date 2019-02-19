@@ -21,9 +21,10 @@
                 <th colspan="3">Lista de turmas</th>
             </tr>
             <tr id="headerList">
-                <td id="nome">Nome da turma</td>
+                <td id="nomeTurma">Nome da turma</td>
                 <td id="ano">Ano</td>
                 <td id="turno">Turno</td>
+                <td id="alteracoes"></td>
             </tr>
         </table>
         <%
@@ -35,9 +36,14 @@
         %>
         <table class="listaTurmas">
             <tr>
-                <td id="nomeTurma"><a href="administrarTurma.jsp"><%out.print(res.getString("nome"));%></a></td>
-                <td id="ano"><a href="administrarTurma.jsp"><%out.print(res.getString("ano"));%></a></td>
-                <td id="turno"><a href="administrarTurma.jsp"><%out.print(res.getString("turno"));%></a></td>
+                <td id="nomeTurma"><%out.print(res.getString("nome"));%></td>
+                <td id="ano"><%out.print(res.getString("ano"));%></td>
+                <td id="turno"><%out.print(res.getString("turno"));%></td>
+                <td id="alteracoes">
+                    <button id="visualizar">Visualizar</button>
+                    <button id="editar">Editar</button>
+                    <button onclick="excluirAluno(<%out.print(res.getInt("cod"));%>)" id="excluir">Excluir</button>
+                </td>
             </tr>
         </table>
         <%

@@ -140,22 +140,22 @@ nav{
     background-color:rgb(25,75,15);
 }
 #nomeTurma{
-    width:50%;
+    width:20%;
 }
 #ano{
     width:20%;
 }
 #turno{
-    width:30%;
+    width:20%;
 }
 #cpf{
-    width:36.5%;
+    width:30%;
 }
 #nomeAluno{
-    width:36.5%;
+    width:30%;
 }
 #alteracoes{
-    width:27%;
+    width:40%;
 }
 .grid-container{
     display:grid;

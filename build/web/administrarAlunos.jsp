@@ -29,7 +29,7 @@
         <%
            try{
                Connection con = new ConnectionFactory().getConnection();
-               String sql = "SELECT cpf, nome FROM alunos ORDER BY nome";
+               String sql = "SELECT cpf, nome, cod FROM alunos ORDER BY nome";
                ResultSet res = con.createStatement().executeQuery(sql);
                while(res.next()){         
         %>
@@ -37,7 +37,11 @@
             <tr>
                 <td id="cpf"><%out.print(res.getString("cpf"));%></td>
                 <td id="nomeAluno"><%out.print(res.getString("nome"));%></td>
-                <td id="alteracoes"><button id="visualizar">Visualizar</button><button id="editar">Editar</button><button id="excluir">Excluir</button></td>
+                <td id="alteracoes">
+                    <button id="visualizar">Visualizar</button>
+                    <button id="editar">Editar</button>
+                    <button onclick="excluirAluno(<%out.print(res.getInt("cod"));%>)" id="excluir">Excluir</button>
+                </td>
             </tr>
         </table>
         <%
@@ -49,6 +53,9 @@
         <script>
             function home(){
                 window.location.href = "index.jsp";
+            }
+            function excluirAluno(cod){
+                window.location.href = "excluiAluno.jsp?cod="+cod;
             }
         </script>
     </body>
